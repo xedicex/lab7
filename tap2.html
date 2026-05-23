@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tapsiriq2</title>
+</head>
+<body>
+    <h2>Sade kalkulyator</h2>
+    <input type="number" id="qurban1" placeholder="eded1">
+    <input type="number" id="qurban2" placeholder="eded2">
+    <br><br>
+    <button onclick="hesabla('+')">+</button>
+    <button onclick="hesabla('-')">-</button>
+    <h2>Cavab: <span id="result">0</span></h2>
+    <script>
+        function hesabla(operator){
+            const a = parseFloat(document.getElementById('qurban1').value);
+            const b = parseFloat(document.getElementById('qurban2').value);
+            const display = document.getElementById('result');
+
+            if (isNaN(a) || isNaN(b)) {
+                display.textContent = "qurban daxil et";
+                return;
+            }
+            let cavab ;
+            if (operator == '+'){
+                cavab = a+b;
+            }
+            else if (operator == '-'){
+                cavab = a-b;
+            }
+            display.textContent = cavab
+        }
+    </script>
+</body>
+</html>
