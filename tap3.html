@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tap3</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px;}
+        #counter { font-size: 10px 20px; font-size: 16px; cursor: pointer;}
+    </style>
+</head>
+<body>
+    <div id="counter">0</div>
+    <button onclick="deyis(1)">Artir</button>
+    <button onclick="deyis(-1)">Azalt</button>
+    <script>
+        let say=0;
+        const countreDisplay = document.getElementById('counter');
+        function deyis(value) {
+            say=say+value;
+            countreDisplay.textContent = say;
+        }
+    </script>
+</body>
+</html>
