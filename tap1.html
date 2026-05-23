@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tapsiriq1</title>
+</head>
+<body>
+    <input type="text" id="userInput" placeholder="Metn:">
+    <button id="showBtn">Goster</button>
+    <p id="displayText"></p>
+    <script>
+        const inputField = document.getElementById('userInput');
+        const button = document.getElementById('showBtn');
+        const displayPara = document.getElementById('displayText');
+        
+        button.addEventListener('click', function() {
+            displayPara.textContent = inputField.value;
+        });
+    </script>
+</body>
+</html>
